@@ -69,9 +69,9 @@ function buildToDo(todo, index) {
   toDoText.innerHTML = todo.description; //Hace referencia al texto del imput
 
   toDoText.id = index;
-  //se le accina de nombre al id el valor pasado por index
+  //se le asigna de nombre al id el valor pasado por index
 
-  if (todo.complete === true) { // si cambio el valor de la propiedad
+  if (todo.complete === true) {  //si cambio el valor de la propiedad
     toDoText.className = "completeText" 
   }
   toDoShell.appendChild(toDoText);
@@ -85,7 +85,7 @@ function buildToDo(todo, index) {
 // Utilizar el método map usando la función previamente creada ('buildToDo')
 // Devolver el nuevo array
 
-function buildToDos(toDos) {
+function buildToDos(toDos) {// a cada todo se le aplica la funcion buildTodo que crea div y su estructura html
   // Tu código acá:
   let toDO = toDos.map(function (todo, i) {
     return buildToDo(todo, i)
